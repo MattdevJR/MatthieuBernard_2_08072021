@@ -15,19 +15,29 @@
   font-family: 'Raleway', Arial, serif;
 }
 
-body{ /*Rest marge de base*/
-  margin: 0;
-  padding: 0;
+html{
+  font-size: 100%;
 }
 
+html, body{
+  margin: 0;
+}
 
+h3{
+  margin : 0;
+}
+
+h2{
+  grid-area: 1/1/1/4;
+  margin: 0;
+}
 
 /*Toute la page*/
 
-.container{
+.container_top{
   width: 100%;
   margin: auto;
-  padding: 0;
+  
   
 }
 
@@ -37,7 +47,7 @@ body{ /*Rest marge de base*/
 .top_nav{
   display: grid;
   grid-template-columns: 60% auto auto auto;
-  
+  width: 100%;
 }
 
 .top_nav a{
@@ -60,33 +70,61 @@ body{ /*Rest marge de base*/
 
 /*LOGO*/
 .top_logo{
-  margin: 1rem;
+  margin: 2rem;
+  cursor: pointer;
 }
+
 
 
 /* MAIN / Autres contenues */
 .top_recherche{
   display: grid;
-  grid-template-columns: repeat(3, auto) 1fr;
-  height: 3rem;
+  grid-template-columns: 3% 10% 8%;
+  grid-template-rows: 125%;
   padding-left: 2rem;
+  align-content: center;
 }
+/*ICONE*/
+.icone_loc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #F2F2F2;
+  border-radius: 2rem 0rem 0rem 2rem;
+  cursor: pointer;
+}
+.saisie{
+  border: 2px solid #F2F2F2;
+}
+.top_recherche button{
+  background-color: blue;
+  border-radius: 0rem  1rem  1rem  0rem;
+  border: 3.5px solid #F2F2F2;
+  padding: 5px;
+  color: white;
+}
+
+.button_recherche:hover{
+  color: #F2F2F2;
+  cursor: pointer;
+}
+
  /*Phrase d'accroche */
  .slogan h2{
    margin-bottom: 0;
-   padding-left: 1rem;
+   padding-left: 2rem;
  }
-
  .slogan p{
    margin-top: 0.5rem;
-   padding-left: 1rem;
+   padding-left: 2rem;
  }
 
   
             /*MENU */
           @media screen and (max-width: 375px){ /*Quand on passe en dessous de 1200px il ce passe*/
            
-            .container {/*L'ensemble de la page*/
+            .container_top {/*L'ensemble de la page*/
               padding-top: 1.4rem;
               padding-left: 0;
               padding-right: 0;
@@ -107,9 +145,9 @@ body{ /*Rest marge de base*/
               padding: 1rem;
              
             }
-            #hebergements, #activites {
+            #hebergements, #activites{
               padding-left: 2rem;
-              border-bottom: 1px solid #F2F2F2;
+              border-bottom: 3.5px solid #F2F2F2;
               border-top: 0;
               padding: 1rem;
             }
@@ -117,5 +155,121 @@ body{ /*Rest marge de base*/
               grid-area: 1/2;
               margin-left: 4rem;
             }
+            #hebergements:active, #activites:active, #important:active{
+              border-bottom: 3.5px solid #0065FC;
+              
+            }
+            
+            .slogan{
+              font-size:1em ;
+            }
+            .top_recherche{
+              grid-template-columns: auto auto auto;
+            }
+          }
+
+/* ********************************************* */
+
+
+.filtres{
+  display: grid;
+  grid-template-columns: 4% 2% 7%  2% 7%  2% 7%  2% 10% ;
+  grid-template-rows: 50%;
+  padding: 2rem;
+  margin: 0;
+  align-content: center;
+}
+
+
+/* ********************************************* */          
+          
+          .grid-container{
+            display: grid;
+            grid-template-columns: 66% 33%;
+            grid-template-rows: 1fr;
+            gap: 2rem;
+            padding: 2rem;
+          }
+          
+          .grid-container > * {
+            border: 3px solid red;
+            background: #f2f2f2;
+          }
+          
+          .cardscontain > div{
+            border-radius: 2rem;
+            overflow: hidden;
+            padding: 0.350rem;
+            background: white;
+          }
+          
+          .cardscontain{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            background: #f2f2f2;
+          }
+          
+          .imgcontainer > img{
+            object-fit: cover;
+            height: 10rem;
+            width: 100%;
+            margin: 0;
+            border-radius: 2rem 2rem 0 0;
+          }
+          
+          .description{
+            margin: 0.5rem;
+          }
+          
+          .description > p{
+            margin-top: 0.250rem;
+          }
+          aside{
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto repeat(3, 1fr);
+            row-gap: 2rem;
             
           }
+          
+          .titleh2{
+            grid-area: unset;
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .container{
+            display: flex;
+            padding: 0.250rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            background: white;
+          }
+          
+          .imgcontain{
+            width: 33%;
+            height: 100%;
+            min-width: 33%;
+            position: relative;
+          }
+          
+          .imgcontain>img{
+            border-radius: 0;
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+            border-radius: 1.5rem 0 0 1.5rem;
+            position: absolute;
+          }
+          
+          .description{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          
