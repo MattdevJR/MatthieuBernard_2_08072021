@@ -11,50 +11,111 @@
        url('../fonts/raleway-v22-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
-html{
-  font-size: 100%;
+*{
   font-family: 'Raleway', Arial, serif;
-
 }
+
+body{ /*Rest marge de base*/
+  margin: 0;
+  padding: 0;
+}
+
+
 
 /*Toute la page*/
 
 .container{
-  max-width: 100%;
+  width: 100%;
   margin: auto;
-  padding: 2rem;
+  padding: 0;
+  
 }
 
+/*LOGO + MENU*/
 /*TOP_NAV*/
-/*MENU*/
+
 .top_nav{
   display: grid;
-  grid-template-columns: 3fr repeat(3, auto);
-  column-gap: 1.5rem;
+  grid-template-columns: 60% auto auto auto;
   
 }
 
 .top_nav a{
   text-decoration: none;
+  text-align: center;
   color: black;
   padding: 3rem 1.25rem;
+  border-top: 2px solid transparent;
 }
 
 .top_nav a:hover{
-  text-decoration: 1px overline;
+  border-top-color: #0065FC;
   color: #0065FC;
+}
+/*Surbrillance bleu S'inscrire*/
+.important{
+  color:  #0065FC;
+  font-weight: bold;
 }
 
 /*LOGO*/
 .top_logo{
-  display: flex;
-  align-items: center;
   margin: 1rem;
 }
+
 
 /* MAIN / Autres contenues */
 .top_recherche{
   display: grid;
   grid-template-columns: repeat(3, auto) 1fr;
   height: 3rem;
+  padding-left: 2rem;
 }
+ /*Phrase d'accroche */
+ .slogan h2{
+   margin-bottom: 0;
+   padding-left: 1rem;
+ }
+
+ .slogan p{
+   margin-top: 0.5rem;
+   padding-left: 1rem;
+ }
+
+  
+            /*MENU */
+          @media screen and (max-width: 375px){ /*Quand on passe en dessous de 1200px il ce passe*/
+           
+            .container {/*L'ensemble de la page*/
+              padding-top: 1.4rem;
+              padding-left: 0;
+              padding-right: 0;
+
+            }
+            .top_nav{/*menu*/
+              grid-template-columns: auto auto;
+              grid-template-rows: auto auto;
+              row-gap: .5rem;
+              column-gap: 0;
+            }
+            .top_logo{/*logo*/
+              margin-top: 0;
+              padding-left: 1.5rem;
+            }
+            .top_nav a{
+              border-top: 0;
+              padding: 1rem;
+             
+            }
+            #hebergements, #activites {
+              padding-left: 2rem;
+              border-bottom: 1px solid #F2F2F2;
+              border-top: 0;
+              padding: 1rem;
+            }
+            #important{
+              grid-area: 1/2;
+              margin-left: 4rem;
+            }
+            
+          }
