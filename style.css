@@ -17,39 +17,44 @@ html{
 
 }
 
-body{
-  margin: 0 auto; /*Encadré ça page - */
-  max-width: 1680px;
+/*Toute la page*/
+
+.container{
+  max-width: 100%;
+  margin: auto;
   padding: 2rem;
 }
 
-/*Partie haute, LOGO + MENU*/
-
-.box_1{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-
-nav{
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-}
-
-nav a{
-  text-decoration: none;
-  padding: 2rem 1.25rem;
+/*TOP_NAV*/
+/*MENU*/
+.top_nav{
+  display: grid;
+  grid-template-columns: 3fr repeat(3, auto);
+  column-gap: 1.5rem;
   
 }
 
-nav a:hover{
-  text-decoration: 2px overline #0065FC;
+.top_nav a{
+  text-decoration: none;
+  color: black;
+  padding: 3rem 1.25rem;
+}
+
+.top_nav a:hover{
+  text-decoration: 1px overline;
   color: #0065FC;
 }
 
-/*Responsive LOGO + MENU*/
+/*LOGO*/
+.top_logo{
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
 
+/* MAIN / Autres contenues */
+.top_recherche{
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  height: 3rem;
+}
