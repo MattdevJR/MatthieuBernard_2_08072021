@@ -26,7 +26,7 @@ html, body{
 }
 
 h3{
-  margin : 0;
+  margin: 0;
 }
 
 h2{
@@ -103,13 +103,13 @@ h2{
   padding-right: 1rem;
   border-radius: 1rem 0 0 1rem;
   align-items: center;
+  cursor: pointer;
 }
 /* ----------Zone de texte---------- */
 #zdt{ 
   padding: 1rem;
   border: 1px solid #F2F2F2;
   font-size: medium;
-  
 }
 /* ----------bouton bleu ---------- */
 .srcbar button{ 
@@ -119,6 +119,7 @@ h2{
   padding: 1rem;
   font-size: medium;
   border-width: 0;
+  cursor: pointer;
 }
 /* ----------Ne pas afficher l'icone sur le non responsive---------- */
 .srcbar button i{ 
@@ -144,7 +145,7 @@ h2{
   height: 51px;
   border-top: 2px solid #DEEBFF;
   border-right: 2px solid #DEEBFF;
-  border-bottom: 2px solid #DEEBFF;
+  border-bottom: 2px solid #DDDDDD;
   border-radius: 30px;
   margin-right: 30px;
   cursor: pointer;
@@ -169,7 +170,7 @@ strong{
   padding: 0.5rem;
   }
 
-/* ----------Background du logo---------- */
+/* ----------Background du logo loc---------- */
 .logo_filtres p{
   border-radius:50%;
   }
@@ -180,168 +181,132 @@ strong{
   cursor: pointer;
   }
 
-
-/* ----------Media query ---------- */
-/* ----------media pour Iphone 8 ---------- */
-            
-@media screen and (max-width: 1200px){ /*Quand on passe en dessous de 400px il ce passe*/
-
-            /* ---------- L'ensemble de la page ---------- */
-            .container_top {
-              padding-top: 1.4rem;
-              padding-left: 0;
-              padding-right: 0;
-
-            }
-            /* ---------- Debut du menu ---------- */
-            .top_nav{
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-template-rows: auto auto;
-              row-gap: .5rem;
-              column-gap: 0;
-            }
-            .top_logo{/*logo*/
-              margin-top: 0;
-              padding-left: 1.5rem;
-            }
-            .top_nav a{
-              border-top: 0;
-              padding: 1rem;
-             
-            }
-            #hebergements, #activites{
-              padding-left: 2rem;
-              border-bottom: 3.5px solid #F2F2F2;
-              border-top: 0;
-              padding: 1rem;
-            }
-            #important{
-              grid-area: 1/2;
-              margin-left: 4rem;
-            }
-            #hebergements:active, #activites:active, #important:active{
-              border-bottom: 3.5px solid #0065FC;
-            }
-            /* ---------- Fin du menu ---------- */
-            /*/
-            /* ---------- Phrase d'accroche ---------- */
-            .slogan p{
-              display: grid;
-              grid-template-columns: 100%;
-              font-size: 1em;
-              margin-top: 2rem;
-            }
-            .slogan h2{
-              margin-top: 0.5em;
-            }
-
-            /* ---------- Invisibilité de bouton Rechercher ---------- */
-            .srcbar span{
-              visibility: hidden;
-            }
-
-            /* ---------- Bouton rechercher ---------- */
-            .srcbar button{
-              border-radius: 1rem;
-              margin-left: -1.5rem;
-              width: 3.5rem;
-            } /*N'arrive pas à centrer l'icone rechercher*/
-            .srcbar button i{
-              display: flex;
-              background: none;
-              justify-content: center;
-              align-content: center;
-            }
-
-             /* ---------- Filtres ---------- */
-
-            .filtres{
-              display: flex;
-              flex-wrap: wrap;
-              flex-direction: column;
-              align-content: space-between;
-            }
-
-
-
-
-
-
+/* ----------Icone info + phrase---------- */
+/* ----------Icone info---------- */
+.information{
+  display: grid;
+  grid-template-columns: 3% 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  align-content: center;
+  padding-left: 2rem;
+}
+.information i{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #DDDDDD;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  color: #0065FC;
+  cursor: pointer;
 }
 
-/* ********************************************* */ 
 
 /* ********************************************* */ 
         /*Hébergement à Marseille + Les plus populaires*/
-
+/* ----------Grid container main ---------- */
   .grid-container{
     display: grid;
-    grid-template-columns: 66% 33%;
+    grid-template-columns: 66% auto;
     grid-template-rows: 1fr;
     gap: 2rem;
     padding: 2rem;
   }
-  
+/* ----------Tout plus petit que  ---------- */
   .grid-container > * {
-    border: 3px solid red;
     background: #f2f2f2;
+    border-radius: 1rem 1rem 1rem 1rem;
   }
-  
+  .grid-container{
+    padding: 2rem;
+  }
+/* ---------- Toutes les div plus petit que  (Vignette) ---------- */
   .cardscontain > div{
     border-radius: 2rem;
     overflow: hidden;
     padding: 0.350rem;
     background: white;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
+  }
+/* ---------- Hover vignette Hébergement  --------- */
+  .cardscontain  > div:hover{
+    cursor: pointer;
+    transform:scale(1.05);
   }
   
+  
+/* ---------- Création grille pour Hébergements ---------- */
+
+/* ---------- Hébergement à Marseille ---------- */
   .cardscontain{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5rem;
+   
     background: #f2f2f2;
+    width: 100%;
   }
-  
+
+/* ---------- Container IMG ---------- */
   .imgcontainer > img{
     object-fit: cover;
     height: 10rem;
     width: 100%;
+    max-width: 100%;
     margin: 0;
     border-radius: 2rem 2rem 0 0;
   }
-  
+
+/* ---------- Nom - Prix - recommandation ---------- */
   .description{
     margin: 0.5rem;
   }
-  
   .description > p{
     margin-top: 0.250rem;
   }
+
+/* ---------- Partie de droite ----------*/
+/* ---------- Les Plus Populaires ---------- */
   aside{
     padding: 2rem;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto repeat(3, 1fr);
+    grid-template-rows: 1fr repeat(2, 1fr);
+
     row-gap: 2rem;
-    
   }
-  
+
+/* ---------- Titre ---------- */
   .titleh2{
     grid-area: unset;
     display: flex;
     justify-content: space-between;
   }
+  aside i:hover{
+    cursor: pointer;
+    color: #0065FC;
+  }
   
+
+/* ---------- Vignette Droite ---------- */
   .container{
     display: flex;
     padding: 0.250rem;
     border-radius: 1.5rem;
     overflow: hidden;
     background: white;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
   }
-  
+
+  /* ---------- Hover Vignette Droite ---------- */
+  .cardscontain2 .container:hover{
+    transform:scale(1.05);
+  }
+
+/* ---------- IMG vignette ---------- */
   .imgcontain{
     width: 33%;
     height: 100%;
@@ -349,7 +314,8 @@ strong{
     position: relative;
   }
   
-  .imgcontain>img{
+/* ---------- Tout ce qui est plus petit que ---------- */
+  .imgcontain > img{
     border-radius: 0;
     width: 100%;
     object-fit: cover;
@@ -358,10 +324,170 @@ strong{
     position: absolute;
   }
   
+/* ---------- Texte - Prix - Recomandation ---------- */
   .description{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-          
+/* ---------- Étoiles de recomandation ---------- */
+  .starsrecommandation{
+    color: #0065FC;
+  }
+  #assombri{
+    color: grey;
+  }
+
+/* ---------- Afficher plus ---------- */
+  section #affp:hover{
+    cursor: pointer;
+    color: #0065FC;
+    transform:scale(1.05);
+  }
+         
+  
+
+
+
+
+  @media  (max-width: 1300px){ /*Quand on passe en dessous de 400px il ce passe*/
+
+    
+    /* ---------- L'ensemble de la page ---------- */
+    .container_top {
+      padding-top: 1.4rem;
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+
+    #heberg{
+      padding-left: 2rem;
+    }
+    /* ---------- Section 1 ---------- */
+    /* ---------- Debut du menu ---------- */
+    .top_nav{
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      row-gap: .5rem;
+      column-gap: 0;
+    }
+    .top_logo{/*logo*/
+      margin-top: 0;
+      padding-left: 1.5rem;
+    }
+    .top_nav a{
+      border-top: 0;
+      padding: 1rem;
+     
+    }
+    #hebergements, #activites{
+      padding-left: 2rem;
+      border-bottom: 3.5px solid #F2F2F2;
+      border-top: 0;
+      padding: 1rem;
+    }
+    #important{
+      grid-area: 1/2;
+      margin-left: 4rem;
+    }
+    #hebergements:active, #activites:active, #important:active{
+      border-bottom: 3.5px solid #0065FC;
+    }
+    /* ---------- Fin du menu ---------- */
+    /*/
+    /* ---------- Phrase d'accroche ---------- */
+    .slogan p{
+      display: grid;
+      grid-template-columns: 100%;
+      font-size: 1em;
+      margin-top: 2rem;
+    }
+    .slogan h2{
+      margin-top: 0.5em;
+    }
+
+    /* ---------- Invisibilité de bouton Rechercher ---------- */
+    .srcbar span{
+      visibility: hidden;
+    }
+
+    /* ---------- Bouton rechercher ---------- */
+    .srcbar button{
+      border-radius: 1rem;
+      margin-left: -1.5rem;
+      width: 3.5rem;
+    } 
+    .srcbar button i{
+      display: flex;
+      background: none;
+      justify-content: center;
+      align-content: center;
+      margin: -1.5em;
+    }
+
+     /* ---------- Filtres ---------- */
+
+    .filtres{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      align-content: space-between;
+    } 
+
+      /* ---------- Logo info + Information ---------- */
+    .information{
+      display: grid;
+      grid-template-columns: 10% 1fr;
+    }
+    .information p{
+      margin-top: 2rem;
+    }
+    
+    
+    .cardscontain{
+      width: 100%;
+      background: none;
+      
+    }
+
+    .grid-container{
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      
+    }
+
+    /* ---------- Section 2 ---------- */
+    .imgcontainer > img {
+      object-fit: cover;
+      height: 6.5rem;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      border-radius: 2rem 2rem 0 0;
+    }
+    
+    aside{
+      padding: 0;
+    }
+
+    .cardscontain > div:hover {
+      cursor: pointer;
+      
+    }
+
+    .cardscontain > div {
+      border-radius: 2rem;
+      overflow: hidden;
+      padding: 0;
+      background: white;
+      /*box-shadow: 0 0 0.5rem rgb(0 0 0 / 15%);*/
+      border-bottom: 1px solid grey;
+    /* ---------- Section 3 ---------- */
+    
+    /* ---------- Section 4 ---------- */
+
+
+}
