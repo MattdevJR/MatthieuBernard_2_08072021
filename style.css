@@ -1,15 +1,4 @@
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400,700;
-  src: url('../fonts/raleway-v22-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/raleway-v22-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/raleway-v22-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/raleway-v22-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/raleway-v22-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/raleway-v22-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
   font-family: 'Raleway', Arial, serif;
 }
@@ -44,6 +33,7 @@ h2{
   width: 100%;
   margin: auto;
 }
+                              /* ----------HEADER---------- */
 
 /* ----------LOGO + MENU / Header---------- */
 /* ----------TOP_NAV---------- */
@@ -53,6 +43,7 @@ h2{
   width: 100%;
 }
 
+/* ----------TOP_NAV lien menu ---------- */
 .top_nav a{
   text-decoration: none;
   text-align: center;
@@ -61,6 +52,7 @@ h2{
   border-top: 2px solid transparent;
 }
 
+/* ----------Hover TOP_NAV---------- */
 .top_nav a:hover{
   border-top-color: #0065FC;
   color: #0065FC;
@@ -78,7 +70,8 @@ h2{
   font-weight: bold;
 }
 
-
+                  /* ----------FIN HEADER---------- */
+                  /* ----------SECTION 1---------- */
 
 /* ----------Section 1 / Slogan / Barre de recherche---------- */
 /* ----------TEXTE---------- */
@@ -91,7 +84,7 @@ h2{
 
 /* ----------BARRE DE RECHERCHE---------- */
 /* ----------GRILLE---------- */
-.barrederecherche{/*Grille*/
+.barrederecherche{
   display: flex;
   padding-left: 2rem;
   padding-top: 2rem;
@@ -123,9 +116,10 @@ h2{
 }
 
 
+                  /* ---------- FIN SECTION 1 ---------- */
+                  /* ----------SECTION 2---------- */
 
 /* ---------- Section 2 / Filtres / Logo d'info / Phrase d'information---------- */
-  /**/
   /* ----------Zone des filtres---------- */
 .section2filtres{
   display: flex;
@@ -134,7 +128,10 @@ h2{
   column-gap: 2.2rem;
   font-weight: bold;
   font-size: large;
+  padding-left: 2rem;
   }
+
+/* ----------ICONE FILTRES---------- */
 .section2filtres i{
   padding: 1rem;
   background-color: #DEEBFF;
@@ -146,6 +143,8 @@ h2{
   align-items: center;
   justify-content: center;  
   }
+
+/* ----------BUTTON FILTRES---------- */
 .section2filtres button{
   display: flex;
   align-items: center;
@@ -158,11 +157,14 @@ h2{
   padding-right: 15px;
   padding-left: 0.5px;
   }
+
+/* ----------HOVER BUTTON---------- */
 .section2filtres button:hover{
   background-color: #DEEBFF;
   cursor: pointer;
   }
 
+/* ---------GRILLE INFORMATION----------- */
 .section2_information{
   display: grid;
   grid-template-columns: 3% 1fr;
@@ -171,7 +173,10 @@ h2{
   align-content: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  padding-left: 2rem;
   }
+
+/* ----------GRILLE INFORMATION---------- */
 .section2_information i{
   display: grid;
   align-items: center;
@@ -185,29 +190,37 @@ h2{
   }
 
 
+                /* ---------- FIN SECTION 2---------- */
+                /* ----------SECTION 3---------- */
+
 /* ---------- Section 3 / Hebergement / Les plus populaires---------- */
-  /*----------CONTAINER SECTION / ASIDE ---------*/
+/*----------CONTAINER SECTION / ASIDE ---------*/
+/* ----------GRILLE HEBERGEMENTS / POPULAIRES---------- */
 .section3container{
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 63% 36%;
   grid-template-rows: 1fr;
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem;
+  width: 95%;
   }
 
-.section3containerr > * {
+/* ----------BORDER SUR TOUTES LE CONTENANT---------- */
+.section3container > * {
   background: #f2f2f2;
   border-radius: 1rem 1rem 1rem 1rem;
   }
-.section3container{
-  padding: 2rem;
-  }
+
+
+.containerbottom:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
 
 /* ---------- Toutes les div plus petit que  (Vignette) ---------- */
 .section3cards > div{
   border-radius: 2rem;
   overflow: hidden;
-  padding: 0.350rem;
   background: white;
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
 }
@@ -216,6 +229,7 @@ h2{
   cursor: pointer;
   transform:scale(1.05);
 }
+
 .section3cards{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -235,6 +249,7 @@ h2{
   border-radius: 2rem 2rem 0 0;
 }
 
+
 /* ---------- Nom - Prix - recommandation ---------- */
 .description{
   margin: 0.5rem;
@@ -242,7 +257,20 @@ h2{
 .description > p{
   margin-top: 0.250rem;
 }
+.descriptionbottom{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+
+.fa-star {
+  color: #0065FC;
+}
+.grey{
+  color: #d9d9d9
+  ;
+}
 /* ---------- Section 3 ---------- */
 /* ---------- Aside ---------- */
 aside{
@@ -251,7 +279,7 @@ aside{
   grid-template-columns: auto;
   grid-template-rows: auto repeat(3, 1fr);
   row-gap: 2rem;
-  
+  background: #f2f2f2;
 }
 
 /* ---------- Titre ---------- */  
@@ -263,12 +291,13 @@ aside{
 
 .containerbottom{
   display: flex;
-  padding: 0.250rem;
   border-radius: 1.5rem;
   overflow: hidden;
   background: white;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
 }
 
+/* ---------- CONTAINER GRILLE LES PLUS POPULAIRES ---------- */ 
 .imgcontainbottom{
   width: 33%;
   height: 100%;
@@ -276,6 +305,7 @@ aside{
   position: relative;
 }
 
+/* ---------- IMAGES CONTAINER GRILLE LES PLUS POPULAIRES ---------- */ 
 .imgcontainbottom>img{
   border-radius: 0;
   width: 100%;
@@ -285,79 +315,15 @@ aside{
   position: absolute;
 }
 
+/* ---------- DESCRIPTION LES PLUS POPULAIRES ---------- */ 
 .description{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-/*
-aside{
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto repeat(3, 1fr);
-  row-gap: 2rem;
-  
-}
-
-.section3visites{
-  display: flex;
-  padding: 0.250rem;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  background: white;  
-  height: 10rem;
-}
-
-.imgcontainvisite{
-  width: 33%;
-  height: 100%;
-  min-width: 33%;
-  position: relative;
-}
-
-.descriptionvisite{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.cardscontain2{
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr ;
-  row-gap: 2rem;
-  background-color: red;
-  border-radius:  2rem 2rem 2rem 2rem;    
-}
 
 
-
-
-
-
-
-.imgcontainvisite > img{
-  border-radius: 0;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-  border-radius: 1.5rem 0 0 1.5rem;
-  position: absolute;
-}
-
-*/
-
-/*
-section3hebergements
-imgcontainer
-description
-*/
-.activitesamarseille h3{
-  padding: 2rem;
-}
-
+/* ---------- Titre ----------  
 .bottomcontainer > div{
   
   display: grid;
@@ -367,48 +333,41 @@ description
   padding: 2rem;
   width: 95%;
   align-content: center;
-}
+}*/
 
-.img_bottom{
-  
-  border-radius: 2rem 2rem 2rem 2rem;
-  height: 35rem;
-  overflow: hidden;
-}
-
-.grid-container-bottom h2{
-  width: 100%;
-  grid-area: 1/1/1/5;
-  margin: 0;
-}
-
-.grid-container-bottom{
-  display: grid;
-  grid-template-columns:
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.cardscontain-bottom > div{
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
-
-}
-.cardscontain-bottom > div:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
+/*---------- GRILLE ACTIVITES A MARSEILLE ----------*/
 .cardscontain-bottom{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows:   1fr;
   gap: 2rem;
   padding: 2rem;
- 
 }
 
+
+/* ---------- ORDRE H2 SECTION 3---------- */
+.grid-container-bottom h2{
+  width: 100%;
+  grid-area: 1/1/1/5;
+  margin: 0;
+}
+
+
+/*---------- DIV DANS CARDSCONTAIN-BOTTOM ----------*/
+.cardscontain-bottom > div{
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
+}
+
+/*---------- HOVER CARDSCONTAIN-BOTTOM ----------*/
+.cardscontain-bottom > div:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+/*---------- IMAGES DES ACTIVITES ----------*/
 .imgcontainer2> img{
   object-fit: cover;
   height: 10rem;
@@ -417,14 +376,14 @@ description
   height: 35em;
   border-radius: 2rem 2rem 0 0;
 }
-
+/*---------- TITRE VIGNETTE ----------*/
 .description2 h3{
   margin: 0.5rem;
   padding-left: 2rem;
 }
 
 
-
+/*---------- FOOTER ----------*/
 .footerbottom {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -439,8 +398,8 @@ cursor: pointer;
 color: #0065FC;
 cursor: pointer;
 }
-.footerbottom {
-background-color: #f2f2f2;
+footer {
+background-color: BLUE;
 }
 .footerbottom h3{
 padding-left: 2rem;
@@ -576,9 +535,7 @@ padding-left: 2rem;
     border-radius: 2rem 2rem 0 0;
   }
   
-  aside{
-    padding: 0;
-  }
+ 
 
   .cardscontain > div:hover{
     cursor: pointer;
