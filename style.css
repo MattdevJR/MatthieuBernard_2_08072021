@@ -5,29 +5,22 @@
 html{
   font-size: 100%;
   max-width: 100%;
-  padding: 2rem;
 }
 
 html, body{
   margin: 0;
-  
 }
 
 h3{
   margin: 0;
-  
 }
 
 h2{
   grid-area: 1/1/1/4;
   margin: 0;
-}/*
-.section2 {
-  padding: 2rem;
 }
-.section3container {
-    padding: 2rem;
-}*/
+
+
 /* ----------Toutes la page---------- */
 .container{
   width: 100%;
@@ -120,7 +113,13 @@ h2{
                   /* ----------SECTION 2---------- */
 
 /* ---------- Section 2 / Filtres / Logo d'info / Phrase d'information---------- */
-  /* ----------Zone des filtres---------- */
+
+.section2{
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+/* ----------Zone des filtres---------- */
 .section2filtres{
   display: flex;
   align-items: center;
@@ -149,13 +148,13 @@ h2{
   display: flex;
   align-items: center;
   margin: 1rem;
-  height: 51px;
-  border: 2px solid #DEEBFF;
+  height: 50px;
+  border: 1.5px solid #dddddd;
   border-radius: 30px;
-  margin-right: 30px;
+  
   cursor: pointer;
   padding-right: 15px;
-  padding-left: 0.5px;
+  padding-left: 0;
   }
 
 /* ----------HOVER BUTTON---------- */
@@ -257,10 +256,14 @@ h2{
 .description > p{
   margin-top: 0.250rem;
 }
+
+/* ---------- Description populaires ---------- */
 .descriptionbottom{
-  display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2rem;
+    width: 30%;
 }
 
 
@@ -339,7 +342,7 @@ aside{
 .cardscontain-bottom{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows:   1fr;
+  grid-template-rows:  auto 1fr;
   gap: 2rem;
   padding: 2rem;
 }
@@ -368,7 +371,7 @@ aside{
 
 
 /*---------- IMAGES DES ACTIVITES ----------*/
-.imgcontainer2> img{
+.imgcontainer2 > img{
   object-fit: cover;
   height: 10rem;
   width: 100%;
@@ -382,35 +385,51 @@ aside{
   padding-left: 2rem;
 }
 
+.grilledoubles{
+  display: flex;
+  flex-direction: column;
+
+}
+
 
 /*---------- FOOTER ----------*/
-.footerbottom {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 1fr;
-padding: 2rem;
-}
-.footerbottom ul:hover{
-color: #0065FC;
-cursor: pointer;
-}
-.footerbottom h3:hover{
-color: #0065FC;
-cursor: pointer;
-}
-footer {
-background-color: BLUE;
-}
-.footerbottom h3{
-padding-left: 2rem;
+.footercontainer{
+  display: flex;
+  gap: 25rem;
+  background-color: #F2F2F2;
 }
 
+.footercolumn{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.footercolumn a{
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+.footercolumn a:hover{
+  color: #0065FC;
+}
+
+.footercolumn h2{
+  padding: 0.5rem;
+}
+.footercolumn h2:hover{
+  color: #0065FC;
+  cursor: pointer;
+}
 
 
 
 
 
-@media  (max-width: 375px){ /*Quand on passe en dessous de 400px il ce passe*/
+
+
+@media  (max-width: 376px){ /*Quand on passe en dessous de 400px il ce passe*/
 
   
   /* ---------- L'ensemble de la page ---------- */
@@ -430,7 +449,7 @@ padding-left: 2rem;
     grid-template-rows: auto auto;
     row-gap: .5rem;
     column-gap: 0;
-    width: 127%;
+    width: 100%;
   }
   .top_logo{/*logo*/
     margin-top: 0;
@@ -491,7 +510,7 @@ padding-left: 2rem;
   }
 
    /* ---------- Filtres ---------- */
-
+/*
   .filtres{
     display: flex;
     align-items: flex-start;
@@ -503,7 +522,11 @@ padding-left: 2rem;
   .filtres h3{
     margin-left: 2rem;
   }
+*/
+.section2filtres button {
+  margin-right: 0px;
 
+ 
     /* ---------- Logo info + Information ---------- */
   .information{
     display: grid;
