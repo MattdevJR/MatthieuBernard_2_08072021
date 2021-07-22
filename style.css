@@ -1,448 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-  font-family: 'Raleway', Arial, serif;
-}
-html{
-  font-size: 100%;
-  max-width: 100%;
-}
-
-html, body{
-  margin: 0;
-}
-
-h3{
-  margin: 0;
-}
-
-h2{
-  grid-area: 1/1/1/4;
-  margin: 0;
-}
-
-
-/* ----------Toutes la page---------- */
-.container{
-  width: 100%;
-  margin: auto;
-}
-                              /* ----------HEADER---------- */
-
-/* ----------LOGO + MENU / Header---------- */
-/* ----------TOP_NAV---------- */
-.top_nav{
-  display: grid;
-  grid-template-columns: 60% auto auto auto;
-  width: 100%;
-}
-
-/* ----------TOP_NAV lien menu ---------- */
-.top_nav a{
-  text-decoration: none;
-  text-align: center;
-  color: black;
-  padding: 3rem 1.25rem;
-  border-top: 2px solid transparent;
-}
-
-/* ----------Hover TOP_NAV---------- */
-.top_nav a:hover{
-  border-top-color: #0065FC;
-  color: #0065FC;
-}
-
-/* ----------LOGO---------- */
-.top_logo{
-  margin: 2rem;
-  cursor: pointer;
-}
-
-/* ----------Surbrillance Bleu "S'inscrire"---------- */
-.important{
-  color:  #0065FC;
-  font-weight: bold;
-}
-
-                  /* ----------FIN HEADER---------- */
-                  /* ----------SECTION 1---------- */
-
-/* ----------Section 1 / Slogan / Barre de recherche---------- */
-/* ----------TEXTE---------- */
-.section1 h2{
-  margin-left: 2rem;
-}
-.section1 p{
-  margin-left: 2rem;
-}
-
-/* ----------BARRE DE RECHERCHE---------- */
-/* ----------GRILLE---------- */
-.barrederecherche{
-  display: flex;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  margin-bottom: 1.5rem; 
-}
-/* ----------ICONE---------- */
-.barrederecherche i{ 
-  display: flex;
-  background-color: #F2F2F2;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 1rem 0 0 1rem;
-  align-items: center;
-  cursor: pointer;
-}
-/* ----------BUTTON RECHERCHER---------- */
-.barrederecherche button{ 
-  color:white;
-  background-color: #0065FC;
-  border-radius: 0 1rem 1rem 0;
-  padding: 1rem;
-  font-size: medium;
-  border-width: 0;
-  cursor: pointer;
-}
-/* ----------ICONE POUR RESPONSIVE---------- */
-.barrederecherche button i{ 
-  display: none;
-}
-
-
-                  /* ---------- FIN SECTION 1 ---------- */
-                  /* ----------SECTION 2---------- */
-
-/* ---------- Section 2 / Filtres / Logo d'info / Phrase d'information---------- */
-
-.section2{
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-}
-/* ----------Zone des filtres---------- */
-.section2filtres{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 2.2rem;
-  font-weight: bold;
-  font-size: large;
-  padding-left: 2rem;
-  }
-
-/* ----------ICONE FILTRES---------- */
-.section2filtres i{
-  padding: 1rem;
-  background-color: #DEEBFF;
-  border-radius: 50% ;
-  color: #0065FC;
-  height: 1.3rem;
-  width: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-  }
-
-/* ----------BUTTON FILTRES---------- */
-.section2filtres button{
-  display: flex;
-  align-items: center;
-  margin: 1rem;
-  height: 50px;
-  border: 1.5px solid #dddddd;
-  border-radius: 30px;
-  
-  cursor: pointer;
-  padding-right: 15px;
-  padding-left: 0;
-  }
-
-/* ----------HOVER BUTTON---------- */
-.section2filtres button:hover{
-  background-color: #DEEBFF;
-  cursor: pointer;
-  }
-
-/* ---------GRILLE INFORMATION----------- */
-.section2_information{
-  display: grid;
-  grid-template-columns: 3% 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  align-content: center;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  padding-left: 2rem;
-  }
-
-/* ----------GRILLE INFORMATION---------- */
-.section2_information i{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-   border: 2px solid #DDDDDD;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  color: #0065FC;
-  cursor: pointer;
-  }
-
-
-                /* ---------- FIN SECTION 2---------- */
-                /* ----------SECTION 3---------- */
-
-/* ---------- Section 3 / Hebergement / Les plus populaires---------- */
-/*----------CONTAINER SECTION / ASIDE ---------*/
-/* ----------GRILLE HEBERGEMENTS / POPULAIRES---------- */
-.section3container{
-  display: grid;
-  grid-template-columns: 63% 36%;
-  grid-template-rows: 1fr;
-  gap: 3rem;
-  padding: 2rem;
-  width: 95%;
-  }
-
-/* ----------BORDER SUR TOUTES LE CONTENANT---------- */
-.section3container > * {
-  background: #f2f2f2;
-  border-radius: 1rem 1rem 1rem 1rem;
-  }
-
-
-.containerbottom:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-/* ---------- Toutes les div plus petit que  (Vignette) ---------- */
-.section3cards > div{
-  border-radius: 2rem;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
-}
-/* ---------- Hover vignette Hébergement  --------- */
-.section3cards  > div:hover{
-  cursor: pointer;
-  transform:scale(1.05);
-}
-
-.section3cards{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2.5rem;
-  padding: 2rem;
-  background: #f2f2f2;
-  width: 95%;
-}
-
-/* ---------- Container IMG ---------- */
-.imgcontainer > img{
-  object-fit: cover;
-  height: 10rem;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  border-radius: 2rem 2rem 0 0;
-}
-
-
-/* ---------- Nom - Prix - recommandation ---------- */
-.description{
-  margin: 0.5rem;
-}
-.description > p{
-  margin-top: 0.250rem;
-}
-
-/* ---------- Description populaires ---------- */
-.descriptionbottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
-    width: 30%;
-}
-
-
-.fa-star {
-  color: #0065FC;
-}
-.grey{
-  color: #d9d9d9
-  ;
-}
-/* ---------- Section 3 ---------- */
-/* ---------- Aside ---------- */
-aside{
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto repeat(3, 1fr);
-  row-gap: 2rem;
-  background: #f2f2f2;
-}
-
-/* ---------- Titre ---------- */  
-.titleh2{
-  grid-area: unset;
-  display: flex;
-  justify-content: space-between;
-}
-
-.containerbottom{
-  display: flex;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
-}
-
-/* ---------- CONTAINER GRILLE LES PLUS POPULAIRES ---------- */ 
-.imgcontainbottom{
-  width: 33%;
-  height: 100%;
-  min-width: 33%;
-  position: relative;
-}
-
-/* ---------- IMAGES CONTAINER GRILLE LES PLUS POPULAIRES ---------- */ 
-.imgcontainbottom>img{
-  border-radius: 0;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-  border-radius: 1.5rem 0 0 1.5rem;
-  position: absolute;
-}
-
-/* ---------- DESCRIPTION LES PLUS POPULAIRES ---------- */ 
-.description{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-/* ---------- Titre ----------  
-.bottomcontainer > div{
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-template-rows: 1fr;
-  gap: 2.5rem;
-  padding: 2rem;
-  width: 95%;
-  align-content: center;
-}*/
-
-/*---------- GRILLE ACTIVITES A MARSEILLE ----------*/
-.cardscontain-bottom{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows:  auto 1fr;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-
-/* ---------- ORDRE H2 SECTION 3---------- */
-.grid-container-bottom h2{
-  width: 100%;
-  grid-area: 1/1/1/5;
-  margin: 0;
-}
-
-
-/*---------- DIV DANS CARDSCONTAIN-BOTTOM ----------*/
-.cardscontain-bottom > div{
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
-}
-
-/*---------- HOVER CARDSCONTAIN-BOTTOM ----------*/
-.cardscontain-bottom > div:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-
-/*---------- IMAGES DES ACTIVITES ----------*/
-.imgcontainer2 > img{
-  object-fit: cover;
-  height: 10rem;
-  width: 100%;
-  margin: 0;
-  height: 35em;
-  border-radius: 2rem 2rem 0 0;
-}
-/*---------- TITRE VIGNETTE ----------*/
-.description2 h3{
-  margin: 0.5rem;
-  padding-left: 2rem;
-}
-
-.grilledoubles{
-  display: flex;
-  flex-direction: column;
-
-}
-
-
-/*---------- FOOTER ----------*/
-.footercontainer{
-  display: flex;
-  gap: 25rem;
-  background-color: #F2F2F2;
-}
-
-.footercolumn{
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  align-items: flex-start;
-}
-
-.footercolumn a{
-  padding: 0.5rem;
-  text-decoration: none;
-  color: black;
-}
-.footercolumn a:hover{
-  color: #0065FC;
-}
-
-.footercolumn h2{
-  padding: 0.5rem;
-}
-.footercolumn h2:hover{
-  color: #0065FC;
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-@media  (max-width: 376px){ /*Quand on passe en dessous de 400px il ce passe*/
-
-  
-  /* ---------- L'ensemble de la page ---------- */
-  .container_top {
-    padding-top: 1.4rem;
-    padding-left: 0;
-    padding-right: 0;
-
+	font-family: 'Raleway', Arial, serif;
   }
 
   
-  /* ---------- Section 1 ---------- */
-  /* ---------- Debut du menu ---------- */
+.sect2,.sect1,.sect3{
+	width: 100%;
+}
+
+/*Start menu*/
   .top_nav{
     display: grid;
     grid-template-columns: auto auto;
@@ -473,115 +39,290 @@ aside{
   #hebergements:active, #activites:active, #important:active{
     border-bottom: 3.5px solid #0065FC;
   }
-  /* ---------- Fin du menu ---------- */
-  /*/
-  /* ---------- Phrase d'accroche ---------- */
-  .slogan p{
-    display: grid;
-    grid-template-columns: 100%;
-    font-size: 1em;
-    margin-top: 2rem;
-    font-size: 19px;
-  }
-  .slogan h2{
-    margin-top: 0.5em;
-    width: 120%;
-    font-size: 30px;
-  }
+  .important {
+    color: #0065FC;
+    font-weight: bold;
+}
+/*End */
 
-  /* ---------- Invisibilité de bouton Rechercher ---------- */
-  .srcbar span{
-    visibility: hidden;
-  }
 
-  /* ---------- Bouton rechercher ---------- */
-  .srcbar button{
-    border-radius: 1rem;
-    margin-left: -1.5rem;
-    width: 3.5rem;
-  } 
+/*Start top h2 / p*/
+.sect1{
+	font-size: 1em;
+	padding: 0.5rem;
+}
+/*End*/
 
-  .srcbar button i{
-    display: flex;
-    background: none;
-    justify-content: center;
-    align-content: center;
-    margin: -1.5em;
-  }
 
-   /* ---------- Filtres ---------- */
-/*
-  .filtres{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    align-content: space-between;
-    margin-left: 0;
-  } 
+/*Start sect1 barre de recherche*/
+.searchbar{
+	display: flex;	
+  margin-bottom: 1.5rem; 
+	height: 2.5rem;
+  justify-content: center;
+}
+.searchbar #zonedetexte{
+  width: 15rem;
+}
+.searchbar i{ 
+	display: flex;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-radius: 1rem 0 0 1rem;
+	align-items: center;
+	cursor: pointer;
+  background: chartreuse;
+  justify-content: center;
+}
+.searchbar .fa-search{
+  background: none;
+  padding-left: 0.1rem;
+  padding-right: 0;
+}
+.searchbar button{ 
+	color:white;
+	background-color: #0065FC;
+	border-radius: 20% 20% 20% 20%;
+	font-size: medium;
+	border-width: 0;
+	cursor: pointer;
+  height: 100%;
+  width: 2.5rem;
+  }
+/*End*/
 
-  .filtres h3{
-    margin-left: 2rem;
-  }
-*/
-.section2filtres button {
-  margin-right: 0px;
 
- 
-    /* ---------- Logo info + Information ---------- */
-  .information{
-    display: grid;
-    grid-template-columns: 10% 1fr;
-  }
-  .information p{
-    margin-top: 2rem;
-  }
+/*Start sect2 Filtres*/
+.sect2 .filtres h2{
+  flex-basis: 100%; /*Determine le h2 a 100% comme width 100%*/
+}
+.filtres {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: large;
+  padding-left: 2rem;
   
+}
+
+.filtres button{
+	background-color: white;
+	color: black;
+	border: 2px solid #4CAF50;
+	border-radius: 2rem 2rem 2rem 2rem;
+	margin: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.filtres i {
   
-  .cardscontain{
-    width: 100%;
-    background: none;
-    padding: 0;
-  }
+  background-color: #DEEBFF;
+  border-radius: 50%;
+  color: #0065FC;
+  height: 55px;
+  width: 55px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
-  .grid-container{
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-  }
+/*End*/
 
-  /* ---------- Section 2 ---------- */
-  .imgcontainer > img {
-    object-fit: cover;
-    height: 6.5rem;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    border-radius: 2rem 2rem 0 0;
-  }
+/*Start section3*/
+.sect3, .description h3{
+  margin: 0;
+}
+.sect3, .description p{
+  margin-top: 0;
+}
+.starsrecommandation{
+  color: #0065FC;
+}
+.starsrecommandation .grey{
+  color: grey;
+}
+/*Start Hebergement*/
+
+ .sect3{
+	 display: flex;
+	 width: 100%;
+   flex-direction: column;
+ }
+ .sect3 .sect3-section1, .sect3 .sect3-section2{
+	
+	width: 100%;
+	flex-direction: column; 
+}
+
+.block1 > img{
+	object-fit: cover;
+	height: 8rem;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	border-radius: 2rem 2rem 0rem 0rem;
+} 
+.sect3-section1 .block1 .description{
+  display: flex;
+  flex-direction: column;
+	margin-left: 1.5rem ;
+}
+
+.sect3-section1 .block1{
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
+  border-radius: 2rem 2rem 2rem 2rem;
   
- 
+}
+.block1{
+  margin-bottom: 2rem;
+}
 
-  .cardscontain > div:hover{
-    cursor: pointer;
-    
-  }
-
-  .cardscontain > div{
-    border-radius: 2rem;
-    overflow: hidden;
-    padding: 0;
-    background: white;
-    /*box-shadow: 0 0 0.5rem rgb(0 0 0 / 15%);*/
-    border-bottom: 1px solid grey;
-  }
-  /* ---------- Section 3 ---------- */
-  
-  
+/*End Hebergement*/
 
 
-  /* ---------- Section 4 ---------- */
 
-
+/*Start les plus populaires*/
+.sect3 .sect3-section2{
+  order: 1;
+  background: #F2F2F2;
+}
+.sect3 .sect3-section1{
+  order: 2;
+}
+.sect3, .description-section2 h3{
+  margin: 0;
+}
+.sect3, .description-section2 p{
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+.description-section2{
+  padding-left: 1.5rem;
 }
 
 
-      
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sect3-section2 .block1 .description{
+  display: flex;
+  flex-direction: column;
+}
+
+.sect3-section2 .block1{
+	display: flex;
+	flex-direction: row;	
+	box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
+	border-radius: 2rem 2rem 2rem 2rem;
+	margin: 2rem 0;
+}
+.sect3-section2 .block1 > img {
+  height: 150px;
+  width: 40%;
+  border-radius: 2rem 0 0rem 2rem;
+}
+
+
+/*End les plus visites*/
+
+
+/*Activites*/
+.sect4{
+  display: flex;
+  flex-direction: column;
+}
+.sect4-section1 .block4 > img {
+  height: 150px;
+  width: 100%;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.block4{
+  margin-bottom: 2rem;
+  border-radius: 2rem 2rem 2rem 2rem;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
+}
+.description-sect4{
+  display: flex;
+  align-content: center;
+  margin-left: 1rem;
+}
+/*End*/
+
+.footercolumn{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.footercolumn a{
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+.footercolumn a:hover{
+  cursor: pointer;
+  color: #0065FC;
+}
+
+/*
+@media screen and (max-width: 1200px) {
+
+  .top_nav{
+    display: grid;
+    grid-template-columns: 60% auto auto auto;
+    width: 100%;
+    
+  }
+  .top_logo {
+    margin: 2rem;
+    cursor: pointer;
+  }
+  .top_nav a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 3rem 1.25rem;
+    border-top: 2px solid transparent;
+  }
+  .top_nav a:hover{
+    border-top-color: #0065FC;
+    color: #0065FC;
+  }
+  .sect1{
+    padding-left: 2rem;
+  }
+  .searchbar{
+    justify-content: flex-start;
+  }
+  .searchbar button {
+    color: white;
+    background-color: #0065FC;
+    border-radius: 0% 30% 30% 0%;
+    font-size: medium;
+    border-width: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 6rem;
+  }
+  .sect3 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 2rem;
+  }
+  .sect3 .sect3-section1 {
+  order: 1;
+  }
+  .sect3 .sect3-section2 {
+  order: 2;
+  }
+
+  .sect3-section1{
+  display: flex;
+  justify-content: space-between;
+  }
+  
+}*/
