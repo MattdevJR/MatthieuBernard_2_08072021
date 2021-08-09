@@ -1,16 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/*@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400,700;
-  src: url('../fonts/raleway-v22-latin-regular.eot'); 
-  src: local(''),
-       url('../fonts/raleway-v22-latin-regular.eot?#iefix') format('embedded-opentype'), 
-       url('../fonts/raleway-v22-latin-regular.woff2') format('woff2'),
-       url('../fonts/raleway-v22-latin-regular.woff') format('woff'), 
-       url('../fonts/raleway-v22-latin-regular.ttf') format('truetype'), 
-       url('../fonts/raleway-v22-latin-regular.svg#Raleway') format('svg'); 
-}*/
 
 *{
   font-family: 'Raleway', Arial, serif;
@@ -18,24 +6,21 @@
 html{
   font-size: 100%;
   max-width: 100%;
-  
 }
 /*MARGE*/
 .sect1, .sect2{
   margin: 0 1rem;
 }
-.sect3-section1, .sect3-section2{
-  
-}
 
 /*MENU + LOGO*/
   .top_nav{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     row-gap: .5rem;
     column-gap: 0;
     width: 100%;
+    justify-content: space-between;
   }
   .top_logo{
     margin-top: 0;
@@ -118,11 +103,12 @@ button span{
   align-content: center;
   align-items: center;
   justify-content: space-between;
+  margin: 0 1rem;
 }
 
 /*Start sect2 Filtres*/
 .sect2 .filtres h2{
-  flex-basis: 100%; /*Determine le h2 a 100% comme width 100%*/
+  flex-basis: 100%; 
 }
 .filtres {
     display: flex;
@@ -137,17 +123,17 @@ button span{
 
 .filtres button{
 	display: flex;
-    align-items: center;
-    margin: 1rem;
-    height: 51px;
-    border: 2px solid #DEEBFF;
-    border-radius: 30px;
-    margin-right: 30px;
-    cursor: pointer;
-    padding-right: 15px;
-    padding-left: 0.5px;
-    font-weight: bold;
-    max-width: 145px;
+  align-items: center;
+  margin: 1rem 0;
+  height: 51px;
+  border: 2px solid #DEEBFF;
+  border-radius: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  padding-right: 15px;
+  padding-left: 0.5px;
+  font-weight: bold;
+  max-width: 145px;
 }
 .filtres i {
   background-color: #DEEBFF;
@@ -159,25 +145,24 @@ button span{
   justify-content: center;
   display: flex;
 }
-
+.filtres .dog{
+  max-width: 190px;
+}
 
 .filtres button:hover{
   background-color: #DEEBFF;
   cursor: pointer;
   transform: scale(1.05);
-  }
-
+}
 
 .information{
   display: flex;
   align-items: center;
   flex-direction: row;
   margin-left: 2rem;
-  
 }
 .information p{
   margin-left: 2rem;
-  
 }
 .fa-info{
   color: #0065FC;
@@ -207,22 +192,26 @@ button span{
 }
 /*Start Hebergement*/
 
- .sect3{
-	 display: flex;
-	 width: 100%;
-   flex-direction: column;
- }
-
+.sect3{
+	display: flex;
+	width: 100%;
+  flex-direction: column;
+}
 .sect3 .sect3-section1{
   width: 100%;
   display: flex;
   flex-wrap: wrap; 
 }
+.sect3-section1 h2{
+  margin: 1rem 1rem 0rem;
+}
+.sect3-section1 .afficherplus{
+  margin: 1rem 1rem 0rem;
+}
+
 .sect3 .sect3-section1 h2.titlehebergement{
   width: 100%;
 }
-
-
 .block1 > img{
   width: 40%;
   border-radius: 2rem 0 0rem 2rem;
@@ -234,7 +223,6 @@ button span{
   flex-direction: column;
 	margin-left: 1.5rem ;
 }
-
 .sect3-section1 .block1{
   display: flex;
   flex-direction: row;
@@ -247,10 +235,10 @@ button span{
 .block1{
   margin-bottom: 2rem;
 }
-
+.eurogras{
+  font-weight: bold;
+}
 /*End Hebergement*/
-
-
 
 /*Start les plus populaires*/
 .sect3 .sect3-section2{
@@ -271,7 +259,6 @@ button span{
   padding-left: 1rem;
 }
 
-
 .title{
   display: flex;
   justify-content: space-between;
@@ -290,6 +277,9 @@ button span{
 	margin: 2rem 1rem;
   max-height: 150px;
 }
+.modif-img h3{
+  max-width: 130px;
+}
 .sect3-section2 .block1 > img {
   height: 140px;
   width: 40%;
@@ -297,10 +287,7 @@ button span{
   object-fit: cover; 
   border: 5px solid #f2f2f2;
 }
-
-
 /*End les plus visites*/
-
 
 /*Activites*/
 .sect4 img{
@@ -308,6 +295,9 @@ button span{
   width: 100%;
   object-fit: cover;
   height: 8rem;
+}
+.sect4-section1 h2{
+  margin: 0rem 1rem 3rem;
 }
 .sect4{
   display: flex;
@@ -348,7 +338,6 @@ footer{
   display: flex;
   flex-direction: column;
   margin: 1rem;
-  
 }
 
 .footercolumn a{
@@ -365,13 +354,15 @@ footer{
 
 
 
-
 @media screen and (min-width:768px){
   
-  
+  .modif-img h3{
+    max-width: none;
+  }
   .footerbottom{
     display: flex;
     justify-content: space-evenly;
+    
   }
   .sect3-section2 .block1{
     width: 30rem;
@@ -397,12 +388,15 @@ footer{
   }
   .top_nav{
     justify-content: space-between;
+    grid-template-columns: auto auto;
   }
+
 }
 
 
 
 @media screen and (min-width:992px){
+
   body {
     height: 100vh;
     
@@ -426,7 +420,6 @@ footer{
     border-bottom: none;
     text-transform: none;
     border-top: 3.5px solid #0065FC;
-    
   }
   
   #hebergements, #activites, #important{
@@ -464,10 +457,11 @@ footer{
   }
   /*Filtres*/
   .filtres {
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
   .sect2 .filtres h2 {
      flex-basis: 0%; 
+     margin-right: 1rem;
   }
   
   .filtres .dog{
@@ -476,7 +470,7 @@ footer{
   }
   
   .information{
-    padding:  2rem 0;
+    padding:  1rem 1rem;
   }
   /*Hebergements et populaires*/
   .sect3 .sect3-section1 h2.titlehebergement {
@@ -491,11 +485,9 @@ footer{
   .sect3{
     display: flex;
     flex-direction: row;
-    /* column-gap: 3rem; */
     justify-content: space-between;
   }
   .sect3 .sect3-section1{
-    
     background-color: #F2F2F2;
     border-radius: 2rem 2rem 2rem 2rem;
     width: 80%;
@@ -549,6 +541,7 @@ footer{
     border: 5px solid #f2f2f2;
     height: 150px;
   }
+  
   .titrepopulaire i:hover{
     color: #0065FC;
     cursor: pointer;
@@ -592,8 +585,8 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:10% 30% 5% 5% 30%;
-    column-gap: 1rem;
-    padding: 1rem;
+    column-gap: 1.5rem;
+    padding: 0rem 2.5rem;
   }
   .sect4-section1 > div{
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
@@ -602,6 +595,8 @@ footer{
   }
   .sect4-section1 h2{
     width: 231px;
+    margin-left: 1rem;
+    grid-area: 1/1/1/5;
   }
   .sect4-section1 > div:hover{
     transform: scale(1.01);
@@ -659,7 +654,7 @@ footer{
     cursor: pointer;
   }
   .block4-5 img{
-    height: 75%;
+    height: 72%;
     width: 100%;
     object-fit: cover;
   }
@@ -676,7 +671,6 @@ footer{
     object-fit: cover;
   }
   
-  
   .footerbottom{
     display:flex;
   }
@@ -689,6 +683,7 @@ footer{
 }
 
 @media screen and (min-width:1300px){
+  
   .descbis .starsrecommandation{
     margin-top: 55px;
   }
@@ -698,9 +693,30 @@ footer{
   .block1 > img{
     width: 96%;
   }
+  .block4-4 .description-sect4{
+    margin-top: -5px;
+  }
+  .block4-5 .description-sect4{
+    margin-top: -5px;
+  }
+  
 }
 
+@media screen and (min-width:1800px){
 
+  .block4-1 img, .block4-4 img{
+    height: 90%;
+    }
+    .block4-3 img, .block4-5 img{
+      height: 77%;
+    }
+    .block4-2 img, .block4-6 img{
+      height: 80%;
+    }
+    .block1 > img{
+      width:97%;
+    }
+}
 
 
 
