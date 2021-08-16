@@ -16,6 +16,9 @@ body{
 
 
 /*Header*/
+.top-nav #logo{
+    margin-left: 1rem;
+}
 
 .top-nav{
     display: grid;
@@ -42,7 +45,7 @@ body{
     border-top: 0;
     padding: 1rem;
 }
-#hebergements:active, #activites:active, #important:active{
+#hebergements:hover, #activites:hover, #important:active{
     border-bottom: 3.5px solid #0065FC;
 }
 #important {
@@ -51,7 +54,7 @@ body{
     grid-area: 1/2;
     margin-left: 4rem;
 }
-        /*End Header*/
+
         /*Titre*/
 .sect1{
     margin-top: 2rem;
@@ -60,6 +63,7 @@ body{
 .sect1 h1{
     margin: 0 1rem;
 }
+
         /*barre de recherche*/
 .searchbar{
 	display: flex;	
@@ -100,7 +104,6 @@ body{
 button span{
   display: none;
 }
-        /*End barre de recherche*/
 
         /*Filtres*/
 .sect2 .filtres h2{
@@ -172,9 +175,9 @@ button span{
     box-shadow: 0px 0px 2px #aaa;
     padding: 0.7em 1em;
   }
-            /*End Filtres*/
-            /*Sect 3 section1/2*/
-/*Titre+icon*/
+            
+        /*Sect 3 section1/2*/
+        /*Titre+icon*/
 .titrepopulaire{
     display: flex;
     justify-content: space-between;
@@ -195,13 +198,12 @@ button span{
 .eurogras{
     font-weight: bold;
 }
-/**/
 .sect3{
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
 }
-/*SECTION3-SECTION2*/
+        /*SECTION3-SECTION2*/
 .sect3-section2{
     background-color: #F2F2F2;
     display: flex;
@@ -253,9 +255,7 @@ button span{
     margin-bottom: 0px;
 }
 
-
-
-/*SECTION3-SECTION1*/
+        /*SECTION3-SECTION1*/
 .sect3-section1{
     display: flex;
     flex-direction: column;
@@ -281,6 +281,10 @@ button span{
     border: 5px solid white;
     
 }
+.sect3-section1 .block1:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
 .sect3-section1 .description{
     border-radius: 0rem 0rem 2rem 2rem;
 }
@@ -301,7 +305,7 @@ button span{
     margin-right: 14rem;
 }
 
-            /*Sect 4*/
+        /*Sect 4*/
 .sect4-section1 h2{
     margin-left: 1rem;
 }
@@ -310,7 +314,6 @@ button span{
     align-content: center;
     justify-content: center;
 }
-
 .sect4 img{
    height: 135px;
     width: 327px;
@@ -318,7 +321,6 @@ button span{
     border-radius: 2rem 2rem 0rem 0rem;
 }
 .block4-1, .block4-2, .block4-3, .block4-4, .block4-5, .block4-6{
-    
     display: flex;
     flex-direction: column;
     margin: 1rem 1rem;
@@ -327,12 +329,9 @@ button span{
     border-radius: 2rem 2rem 2rem 2rem;
     box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
 }
-
 .description-sect4{
     margin-left: 1.5rem;
 }
-
-
 .footerbottom{
     display: flex;
     flex-direction: column;
@@ -354,25 +353,36 @@ button span{
 
 
 
-
-
-
 /*MEDIA Q*/
 @media screen and (min-width:576px){
+
+    #hebergements, #activites, #important{
+        border-bottom: unset;
+        padding: 25px;
+    }
+    #hebergements:hover, #activites:hover, #important:hover{
+        border-top: 3.5px solid #0065FC;
+        border-bottom: unset;
+    }
+    .sect1, .sect2{
+        margin-left: 1rem;
+    }
     .top-nav{
         display: flex;
         justify-content: center;
+        margin: 0 1.5rem;
+        width: auto;
     }
     .top-nav #logo{
-        margin-right: 22%;
+        margin-right: auto;
+        margin-left: unset;
     }
     #important{
         margin-left: 0;
     }
-
     button span{
         display: block;
-      }
+    }
     .searchbar .fa-search{
         display: none; 
     }
@@ -385,34 +395,31 @@ button span{
         cursor: pointer;
         height: 100%;
         width: 6.5rem;
-      }
-    
-    
+    }
+    .sect3-section2 .block1{
+        box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
+    }
+    .information{
+        margin-left: 2rem;
+    }
 
 }
 
 @media screen and (min-width:768px){
-    .top-nav #logo{
-        margin-right: 40%;
-    }
-
+    
+    
     .titlehebergement{
         width: 100%;
         margin-left: 1rem;
     }
-    
     .sect3-section1{
         flex-wrap: wrap;
         flex-direction: unset;
         justify-content: center;
         align-content: flex-start;
-        
     }
     .titlehebergement h2{
         margin-left: 2rem;
-    }
-    .sect3-section2 .block1{
-        box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
     }
     .sect3-section2 .description-section2 .starsrecommandation{
         margin-top: 20px;
@@ -426,27 +433,24 @@ button span{
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .footerbottom{
         flex-direction: row;
         justify-content: space-around;
+        background: #F2F2F2;
     }
+
 }
 
 @media screen and (min-width:992px){
-    .top-nav #logo{
-        margin-right: 55%;
-    }
+
     .description-section2{
         font-size: 15px;
     }
     .sect3-section2 .description-section2 .starsmodif{
         margin-top: 2px;
     }
-
     .sect3{
         flex-direction: row;
-        
     }
     .titlehebergement h2{
         margin-left: 1rem;
@@ -474,12 +478,17 @@ button span{
         height: 108px;
         background: white;
     }
-
     .sect3-section1 .block1{
         margin: 0.5rem 0.5rem;
         max-width: 30%;
     }
-
+    .titlehebergement .afficherplus{
+        margin-bottom: 30px;
+    }
+    .titlehebergement .afficherplus:hover{
+        cursor: pointer;
+        color: #0065FC;
+    }
     .sect4-section1{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -487,6 +496,7 @@ button span{
         column-gap: 1.5rem;
         padding: 0rem 2.5rem;
         margin-bottom: -4rem;
+        margin-top: 4rem;
     }
     .sect4-section1 > div{
         box-shadow: 0 0 0.5rem rgb(0 0 0 / 50%);
@@ -495,7 +505,7 @@ button span{
     }
       .sect4-section1 h2{
         width: 231px;
-        margin-left: 1rem;
+        margin-left: -1.5rem;
         grid-area: 1/1/1/5;
     }
       .sect4-section1 > div:hover{
@@ -514,7 +524,6 @@ button span{
         width: 100%;
         object-fit: cover;
     }
-    
     .sect4-section1 .block4-2{
         grid-area: 2/2/4/2;
         cursor: pointer;
@@ -524,7 +533,6 @@ button span{
         width: 100%;
         object-fit: cover;
     }
-    
     .sect4-section1 .block4-3{
         grid-area: 5/2/6/2;
         cursor: pointer;
@@ -534,12 +542,10 @@ button span{
         width: 100%;
         object-fit: cover;
     }
-    
     .sect4-section1 .block4-4{
         grid-area: 2/3/6/3;
         cursor: pointer;
     }
-    
     .block4-4 img{
         height: 88%;
         width: 100%;
@@ -548,7 +554,6 @@ button span{
     .block4-4 .description-sect4{
         margin-top: -15px;
     }
-    
     .sect4-section1 .block4-5{
         grid-area: 2/5/3/4;
         cursor: pointer;
@@ -578,25 +583,19 @@ button span{
         max-height: unset;
         border-radius: unset;
         box-shadow: unset;
-    
     }
-
 
 }
 
 @media screen and (min-width:1200px){
-    .top-nav #logo{
-        margin-right: 63%;
-    }
+    
 
     .sect3-section2 .description-section2 .starsrecommandation{
         margin-top: 20px;
     }
-    
     .description h3{
         max-width: 235px;
     }
-
     .sect3-section1 img{
         max-width: 96%;
     }
@@ -606,15 +605,25 @@ button span{
     .block4-5 .description-sect4{
         margin-top: 0px;
     }
-    .sect4-section1 h2{
-        margin-left: 0rem;
+    .sect3-section1 {
+        width: 75%;
+    }
+
+}
+
+@media screen and (min-width:1276px){
+
+
+    .block4-4 .description-sect4 {
+        margin-top: -2px;
     }
 
 }
 
 @media screen and (min-width:1400px){
-    .top-nav #logo{
-        margin-right: 68%;
+    html{
+        width: 1400px;
+        margin: auto;
     }
     .sect3-section1 .block1{
         max-width: 30%;
@@ -622,18 +631,15 @@ button span{
     .sect3-section1 img{
         max-width: 96.5%;
     }
-
-    
-
-    
-    
+    .block4-4 .description-sect4{
+        margin-top: -2px;
+    }
 
 }
 
 @media screen and (min-width:1700px){
     .sect3-section1 .block1{
         width: 30%;
-        margin: 1rem 1rem;
     }
     .sect3-section1 img{
         width: unset;
