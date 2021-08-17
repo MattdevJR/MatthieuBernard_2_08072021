@@ -124,7 +124,7 @@ button span{
     display: flex;
     align-items: center;
     margin: 1rem 0;
-    height: 51px;
+    height: 50px;
     border: 2px solid #DEEBFF;
     border-radius: 30px;
     margin-right: 30px;
@@ -132,7 +132,8 @@ button span{
     padding-right: 15px;
     padding-left: 0.5px;
     font-weight: bold;
-    max-width: 145px;
+    max-width: 155px;
+    background-color: #ffffff;
 }
 .filtres i {
     background-color: #DEEBFF;
@@ -143,6 +144,11 @@ button span{
     align-items: center;
     justify-content: center;
     display: flex;
+    font-size: 20px;
+}
+.filtres span{
+    display: flex;
+    margin-left: 10px;
 }
 .filtres .dog{ 
     max-width: 220px;
@@ -181,12 +187,13 @@ button span{
 .titrepopulaire{
     display: flex;
     justify-content: space-between;
-    margin: 0rem 1rem;
+    margin-top: 2rem;
     align-items: center;
     width: 90%;
 }
 .titrepopulaire .stats{
     cursor: pointer;
+    font-size: 30px;
 }
 .titrepopulaire .stats:hover{
     color: #0065FC;
@@ -194,6 +201,7 @@ button span{
 .titlehebergement h2{
     display: flex;
     margin-right: 2rem;
+    margin-top: 3rem;
 }
 .eurogras{
     font-weight: bold;
@@ -217,7 +225,7 @@ button span{
     display: flex;
     align-items: center;
     object-fit: cover;
-    border-radius: 2rem 0rem 0rem 2rem;
+    border-radius: 20px 0px 0px 20px;
     border: 5px solid white;
 }
 
@@ -226,9 +234,12 @@ button span{
     margin: 0.5rem 1rem;
     max-width: 337px;
     max-height: 269.44px;
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 20px;
     background: white;
     
+}
+.sect3-section2 .blockmarg{
+    margin-bottom: 3rem;
 }
 .description-section2{
     border-radius: 0rem 2rem 2rem 0rem;
@@ -267,7 +278,7 @@ button span{
     margin: 1rem 1rem;
     max-width: 337px;
     max-height: 269.44px;
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 20px;
     box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
     
 }
@@ -277,7 +288,7 @@ button span{
     display: flex;
     align-items: center;
     object-fit: cover;
-    border-radius: 2rem 2rem 0rem 0rem;
+    border-radius: 20px 20px 0px 0px;
     border: 5px solid white;
     
 }
@@ -318,15 +329,15 @@ button span{
    height: 135px;
     width: 327px;
     object-fit: cover;
-    border-radius: 2rem 2rem 0rem 0rem;
+    border-radius: 20px 20px 0px 0px;
 }
 .block4-1, .block4-2, .block4-3, .block4-4, .block4-5, .block4-6{
     display: flex;
     flex-direction: column;
-    margin: 1rem 1rem;
+    margin: 2rem 1rem;
     max-width: 337px;
     max-height: 269.44px;
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 20px 20px 20px 20px;
     box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
 }
 .description-sect4{
@@ -335,9 +346,11 @@ button span{
 .footerbottom{
     display: flex;
     flex-direction: column;
+    background: #F2F2F2;
 }
 .footerbottom h2{
-    margin: 0 1rem;
+    margin: 2rem 1rem;
+    margin-top: 3rem;
 }
 .footerbottom a{
     margin: 1rem 1rem;
@@ -421,6 +434,9 @@ button span{
     .titlehebergement h2{
         margin-left: 2rem;
     }
+    .block4-1, .block4-2, .block4-3, .block4-4, .block4-5, .block4-6{
+        margin: 1rem 1rem;
+    }
     .sect3-section2 .description-section2 .starsrecommandation{
         margin-top: 20px;
     }
@@ -436,7 +452,7 @@ button span{
     .footerbottom{
         flex-direction: row;
         justify-content: space-around;
-        background: #F2F2F2;
+        
     }
 
 }
@@ -460,6 +476,9 @@ button span{
         border-radius: 2rem 2rem 2rem 2rem;
         margin-left: 1rem;
     }
+    .titlehebergement h2{
+        margin-top: 1rem;
+    }
     .sect3-section1 img{
         max-width: 95%;
     }
@@ -472,7 +491,7 @@ button span{
     .sect3-section2{
         border-radius: 2rem 2rem 2rem 2rem;
         height: unset;
-        margin: 0 1rem;
+        margin: 0 2rem;
     }
     .sect3-section1 .description{
         height: 108px;
@@ -621,7 +640,7 @@ button span{
 }
 
 @media screen and (min-width:1400px){
-    html{
+    main{
         width: 1400px;
         margin: auto;
     }
