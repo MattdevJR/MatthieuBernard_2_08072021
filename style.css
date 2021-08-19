@@ -278,7 +278,7 @@ button span{
     margin: 1rem 1rem;
     max-width: 337px;
     max-height: 269.44px;
-    border-radius: 20px;
+    border-radius: 2rem;
     box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
     
 }
@@ -376,6 +376,10 @@ button span{
     #hebergements:hover, #activites:hover, #important:hover{
         border-top: 3.5px solid #0065FC;
         border-bottom: unset;
+    }
+    #hebergements{
+        color: #0065FC;
+        border-top: 3.5px solid #0065FC;
     }
     .sect1, .sect2{
         margin-left: 1rem;
@@ -524,7 +528,7 @@ button span{
     }
       .sect4-section1 h2{
         width: 231px;
-        margin-left: -1.5rem;
+        margin-left: 0rem;
         grid-area: 1/1/1/5;
     }
       .sect4-section1 > div:hover{
