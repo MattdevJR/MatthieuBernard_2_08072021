@@ -45,6 +45,10 @@ body{
     border-top: 0;
     padding: 1rem;
 }
+#hebergements{
+    color: #0065FC;
+    border-bottom: 3.5px solid #0065FC;
+}
 #hebergements:hover, #activites:hover, #important:active{
     border-bottom: 3.5px solid #0065FC;
 }
@@ -373,14 +377,15 @@ button span{
         border-bottom: unset;
         padding: 25px;
     }
-    #hebergements:hover, #activites:hover, #important:hover{
-        border-top: 3.5px solid #0065FC;
-        border-bottom: unset;
-    }
     #hebergements{
         color: #0065FC;
         border-top: 3.5px solid #0065FC;
     }
+    #hebergements:hover, #activites:hover, #important:hover{
+        border-top: 3.5px solid #0065FC;
+        border-bottom: unset;
+    }
+    
     .sect1, .sect2{
         margin-left: 1rem;
     }
