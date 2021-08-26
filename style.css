@@ -132,7 +132,7 @@ button span{
     height: 50px;
     border: 2px solid #DEEBFF;
     border-radius: 30px;
-    margin-right: 30px;
+    margin-right: 29px;
     cursor: pointer;
     padding-right: 15px;
     padding-left: 0.5px;
@@ -502,6 +502,9 @@ button span{
         border-radius: 2rem 2rem 2rem 2rem;
         height: unset;
         margin: 0 2rem;
+    }
+    .titrepopulaire{
+        margin-top: 0;
     }
     .sect3-section1 .description{
         height: 108px;
