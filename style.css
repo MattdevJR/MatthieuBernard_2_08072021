@@ -130,7 +130,7 @@ button span{
     align-items: center;
     margin: 1rem 0;
     height: 50px;
-    border: 2px solid #DEEBFF;
+    border: 2px solid #d9d9d9;
     border-radius: 30px;
     margin-right: 29px;
     cursor: pointer;
@@ -150,6 +150,7 @@ button span{
     justify-content: center;
     display: flex;
     font-size: 20px;
+    margin-left: -2px;
 }
 .filtres span{
     display: flex;
@@ -203,6 +204,9 @@ button span{
 .titrepopulaire .stats:hover{
     color: #0065FC;
 }
+.titlehebergement{
+    flex-basis: 100%;
+}
 .titlehebergement h2{
     display: flex;
     margin-right: 2rem;
@@ -243,6 +247,10 @@ button span{
     background: white;
     
 }
+.sect3-section2 a{
+    text-decoration: none;
+    color: black;
+}
 .sect3-section2 .blockmarg{
     margin-bottom: 3rem;
 }
@@ -259,7 +267,7 @@ button span{
     color: #0065FC;
 }
 .starsrecommandation .grey{
-    color: grey;
+    color: #d9d9d9;
 }
 .sect3-section2 .description-section2 .starsrecommandation{
     margin-top: 35px;
@@ -274,27 +282,39 @@ button span{
         /*SECTION3-SECTION1*/
 .sect3-section1{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 .sect3-section1 .block1{
     display: flex;
     flex-direction: column;
     margin: 1rem 1rem;
-    max-width: 337px;
-    max-height: 269.44px;
+    /* max-width: 337px;
+    max-height: 269.44px; */
+    flex: 1 0 20rem;
     border-radius: 2rem;
     box-shadow: 0 0 0.4rem rgb(0 0 0 / 50%);
+    background: white;
     
 }
+.block1 a{
+    text-decoration: none;
+    color: black;
+}
 .sect3-section1 img{
-    height: 115px;
-    width: 327px;
+    /* height: 115px; */
+    /*width: 327px;*/
+    width: calc(100% - 1rem);
     display: flex;
-    align-items: center;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
-    border: 5px solid white;
+    justify-content: center;
+    height: 9rem;
+    /* align-items: center; */
+    /* object-fit: cover; */
+    border-radius: 2rem 2rem 0px 0px;
+    padding: 0.5rem;
+    /* border: 5px solid white; */
     
 }
 .sect3-section1 .block1:hover{
@@ -325,6 +345,10 @@ button span{
 .sect4-section1 h2{
     margin-left: 1rem;
 }
+.sect4-section1 a{
+    text-decoration: none;
+    color: black;
+}
 .sect4{
     display: flex;
     align-content: center;
@@ -348,10 +372,13 @@ button span{
 .description-sect4{
     margin-left: 1.5rem;
 }
+footer{
+    background: #F2F2F2;
+}
 .footerbottom{
     display: flex;
     flex-direction: column;
-    background: #F2F2F2;
+    
 }
 .footerbottom h2{
     margin: 2rem 1rem;
@@ -434,13 +461,14 @@ button span{
     .titlehebergement{
         width: 100%;
         margin-left: 1rem;
+        flex-basis: 100%;
     }
     .sect3-section1{
         flex-wrap: wrap;
-        flex-direction: unset;
         justify-content: center;
         align-content: flex-start;
     }
+    
     .titlehebergement h2{
         margin-left: 2rem;
     }
@@ -461,8 +489,11 @@ button span{
     }
     .footerbottom{
         flex-direction: row;
-        justify-content: space-around;
-        
+        /*justify-content: space-around;*/
+        padding: 2.5rem; 
+    }
+    .footercolumn{
+        margin-right: auto;
     }
 
 }
@@ -489,26 +520,27 @@ button span{
     .titlehebergement h2{
         margin-top: 1rem;
     }
-    .sect3-section1 img{
-        max-width: 95%;
-    }
+    
     .sect3-section1{
-        width: 80%;
+        width: 70%;
     }
     .description h3{
-        max-width: 178px;
+        max-width: 245px;
     }
     .sect3-section2{
         border-radius: 2rem 2rem 2rem 2rem;
         height: unset;
         margin: 0 2rem;
+        width: 30%;
     }
     .titrepopulaire{
         margin-top: 0;
+        margin-bottom: 2rem;
+    
     }
     .sect3-section1 .description{
         height: 108px;
-        background: white;
+        
     }
     .sect3-section1 .block1{
         margin: 0.5rem 0.5rem;
@@ -546,7 +578,10 @@ button span{
       .sect4-section1 img{
         border-radius: 2rem 2rem 0rem 0rem;
     }
-    
+      .sect4-section1 a{
+          text-decoration: none;
+          color: black;
+      }
       .sect4-section1 .block4-1{
         grid-area:2/1/6/2 ;
         cursor: pointer;
@@ -628,9 +663,7 @@ button span{
     .description h3{
         max-width: 235px;
     }
-    .sect3-section1 img{
-        max-width: 96%;
-    }
+   
     .sect3-section1 .block1{
         max-width: 30%;
     }
@@ -640,6 +673,7 @@ button span{
     .sect3-section1 {
         width: 75%;
     }
+    
 
 }
 
@@ -660,22 +694,23 @@ button span{
     .sect3-section1 .block1{
         max-width: 30%;
     }
-    .sect3-section1 img{
-        max-width: 96.5%;
-    }
+    
     .block4-4 .description-sect4{
         margin-top: -2px;
     }
-
+    .footerbottom{
+        display: flex;
+        justify-content: space-between;
+        width: calc(1400px - 5rem);
+        margin: auto;
+    }
+    
 }
 
 @media screen and (min-width:1700px){
     .sect3-section1 .block1{
         width: 30%;
     }
-    .sect3-section1 img{
-        width: unset;
-        max-width: unset;
-    }
+  
 
 }
